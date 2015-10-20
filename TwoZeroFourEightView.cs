@@ -77,6 +77,7 @@ namespace twozerofoureight
             UpdateTile(lbl32,board[3, 2]);
             UpdateTile(lbl33,board[3, 3]);
         }
+
         private void Score(int[,] board) {
 
             int point = 0;
