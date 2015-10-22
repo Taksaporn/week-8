@@ -14,6 +14,7 @@ namespace twozerofoureight
     {
         Model model;
         Controller controller;
+        TwoZeroFourEightScoreView view_score = new TwoZeroFourEightScoreView();
        
         public TwoZeroFourEightView()
         {
@@ -29,6 +30,7 @@ namespace twozerofoureight
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
             Score(((TwoZeroFourEightModel)m).GetBoard());
+            
         }
 
         private void UpdateTile(Label l, int i)
@@ -87,8 +89,9 @@ namespace twozerofoureight
                     point = point + board[i, j];
                 }
             }
-
-            lblScore.Text = Convert.ToString(point);
+            view_score.show_score(Convert.ToString(point));
+            view_score.Show(); //show two form same time
+           // lblScore.Text = Convert.ToString(point);
 
         }
 
