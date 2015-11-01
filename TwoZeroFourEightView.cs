@@ -29,8 +29,9 @@ namespace twozerofoureight
         public void Notify(Model m)
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
-            Score(((TwoZeroFourEightModel)m).GetBoard());
-            
+            Score(((TwoZeroFourEightModel)m).Getsum());
+           
+
         }
 
         private void UpdateTile(Label l, int i)
@@ -80,18 +81,11 @@ namespace twozerofoureight
             UpdateTile(lbl33,board[3, 3]);
         }
 
-        private void Score(int[,] board) {
+        private void Score(int sum) {
 
-            int point = 0;
-
-            for (int i = 0; i < 4; i++) {
-                for (int j = 0; j < 4; j++) {
-                    point = point + board[i, j];
-                }
-            }
-            view_score.show_score(Convert.ToString(point));
-            view_score.Show(); //show two form same time
-           // lblScore.Text = Convert.ToString(point);
+            lblScore.Text = Convert.ToString(sum);
+            view_score.show_score(lblScore.Text);
+            view_score.Show();
 
         }
 
@@ -118,6 +112,11 @@ namespace twozerofoureight
         private void label1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void TwoZeroFourEightView_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

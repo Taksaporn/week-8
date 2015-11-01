@@ -25,5 +25,10 @@ namespace twozerofoureight
         public void show_score(string score) {
             lblScore.Text = score;
         }
+
+        private void TwoZeroFourEightScoreView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
