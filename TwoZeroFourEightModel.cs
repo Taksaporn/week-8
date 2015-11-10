@@ -37,6 +37,7 @@ namespace twozerofoureight
             sum = sen;
 
             return sum;
+            NotifyAll();
         }
 
         public TwoZeroFourEightModel(int size)
